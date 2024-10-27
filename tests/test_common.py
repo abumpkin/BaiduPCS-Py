@@ -41,6 +41,7 @@ from baidupcs_py.utils import human_size, human_size_to_int
 
 
 def test_join_path():
+    '''测试路径连接'''
     a = "/foo"
     b = "bar"
     assert join_path(a, b) == "/foo/bar"
@@ -160,6 +161,8 @@ def test_aescryptography():
 
 
 def test_simplecryptography_time():
+    """测试简单加密效率
+    """
     key = os.urandom(32)
     c = SimpleCryptography(key)
     buf = b"a" * 1024 * 1024 * 100
@@ -202,6 +205,8 @@ def test_noencryptio():
 
 
 def test_simpleencryptio():
+    """ 测试简单加密
+    """
     key = b"123"
     buf = os.urandom(1024 * 1024 * 50)
     bio = io.BytesIO(buf)

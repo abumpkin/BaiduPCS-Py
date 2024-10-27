@@ -51,7 +51,6 @@ setuptools = ">=69.0"
 cython = ">=3.0"
 
 [tool.poetry.build]
-script = "build.py"
 generate-setup-file = true
 
 [tool.poetry.scripts]

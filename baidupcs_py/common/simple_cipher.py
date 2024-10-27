@@ -1,12 +1,15 @@
 import random
 import copy
 
-cdef crypt(unsigned char *data, unsigned char *byte_map, int len_):
-    cdef unsigned int c
+def crypt(data, byte_map, len_):
+    map(lambda x: byte_map[x], data)
 
-    for i in range(len_):
-        c = data[i]
-        data[i] = byte_map[c]
+# cdef crypt(unsigned char *data, unsigned char *byte_map, int len_):
+#     cdef unsigned int c
+
+#     for i in range(len_):
+#         c = data[i]
+#         data[i] = byte_map[c]
 
 
 class SimpleCryptography:
@@ -36,12 +39,12 @@ class SimpleCryptography:
         self._key = key
 
     def encrypt(self, data):
-        data = bytes(bytearray(data))  # copy
+        data = bytearray(data)  # copy
         crypt(data, self._encrypt_byte_map, len(data))
         return data
 
     def decrypt(self, data):
-        data = bytes(bytearray(data))  # copy
+        data = bytearray(data)  # copy
         crypt(data, self._decrypt_byte_map, len(data))
         return data
 

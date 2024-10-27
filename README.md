@@ -95,12 +95,6 @@ pip3 install Cython
 pip3 install BaiduPCS-Py
 ```
 
-### Windows 依赖
-
-在 Windows 上，BaiduPCS-Py 依赖 [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)。
-
-在安装 BaiduPCS-Py 前，请先安装 [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)，再在其中勾选 `C++ 生成工具` 并安装。完成后即可安装 BaiduPCS-Py。
-
 ## 更新
 
 ```
